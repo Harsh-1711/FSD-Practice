@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [1, 2, 3, 4, 5];
+        function show() {
+            document.getElementById("t1").innerHTML = arr;
+            console.log("object")
+        }
+        function len() {
+            document.getElementById("t2").innerHTML = arr.length;
+        }
+    </script>
+</head>
+
+
+<input type="button" value="click here" onclick="show()">
+<p id=t1>array:</p>
+
+<input type="button" value="click here" onclick="len()">
+<p id="t2">length:</p>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+var arr = ["Red", "Yellow", "Pink", "Green", "Black", "Blue", "Neon"];
+console.log(arr);
+// var arr1 = ["Aloo", "Pyaaz"];
+// arr.pop();
+// arr.push("White");
+// arr.shift();
+// arr.unshift("White");
+// arr.length;
+// console.log(arr.concat(arr1));
+// console.log(arr.slice(1, 3));
+// console.log(arr.splice(0, 1));
+// console.log(arr.length);
+// console.log(arr);
