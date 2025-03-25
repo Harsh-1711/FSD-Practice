@@ -1,5 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import { Button } from "./components/home.jsx";
 import Button2 from "./components/home.jsx";
 import Btn from "./components/btn.jsx";
@@ -13,6 +15,7 @@ import Text from "./components/Text.jsx";
 // import Ftextbox from "./components/Ftextbox.jsx";
 import Login from "./Pages/Login.jsx";
 import Controlled from "./Pages/Controlled.jsx";
+import Home from "./Pages/Home.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -23,10 +26,15 @@ createRoot(document.getElementById("root")).render(
     <Practice1 stream="MCA" location="Delhi" />
     <Stateful />
     <LikeCounter />
-    <Color />
-    <Click />
-    <Text /> */}
-    <Login />
-    {/* <Controlled /> */}
+    <Color />*/
+    /* <Click />
+    <Text /> */
+    /* <Login /> */
+    /* <Controlled /> */}
+    <Router>
+      <Routes>
+        <Route path="/Home" element={<Home />} />
+      </Routes>
+    </Router>
   </StrictMode>
 );

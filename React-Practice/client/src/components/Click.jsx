@@ -8,7 +8,12 @@ class Click extends Component {
     return (
       <>
         <h1>{this.props.val}</h1>
-        <button onClick={this.props.change}> Click Here</button>
+        <button
+          onClick={this.props.change}
+          className="border-solid border-1 bg-gray-300"
+        >
+          Click Here
+        </button>
       </>
     );
   }
