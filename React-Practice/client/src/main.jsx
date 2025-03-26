@@ -2,38 +2,17 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Button } from "./components/home.jsx";
-import Button2 from "./components/home.jsx";
-import Btn from "./components/btn.jsx";
-import Practice1 from "./components/Practice1.jsx";
-import Stateful from "./components/Stateful.jsx";
-import LikeCounter from "./components/LikeCounter.jsx";
-import Color from "./components/Color.jsx";
-import Click from "./components/Click.jsx";
-import Text from "./components/Text.jsx";
-// import Ftext from "./components/Ftext.jsx";
-// import Ftextbox from "./components/Ftextbox.jsx";
 import Login from "./Pages/Login.jsx";
-import Controlled from "./Pages/Controlled.jsx";
 import Home from "./Pages/Home.jsx";
+import AllComponents from "./Pages/AllComponents.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <Button text="Harsh" />
-    <Button2 text="Hello" />
-    <Btn styles="btn1" text="Hi" />
-    <Btn styles="btn" text="Hello buddy" />
-    <Practice1 stream="MCA" location="Delhi" />
-    <Stateful />
-    <LikeCounter />
-    <Color />*/
-    /* <Click />
-    <Text /> */
-    /* <Login /> */
-    /* <Controlled /> */}
     <Router>
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/all-components" element={<AllComponents />} />
       </Routes>
     </Router>
   </StrictMode>
