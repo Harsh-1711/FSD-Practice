@@ -19,7 +19,7 @@ const Home = () => {
 
   const handleSave = async (event) => {
     event.preventDefault();
-    console.log("🚀 Form Data:", formData);
+    console.log("Form Data:", formData);
 
     try {
       const response = await axios.post(
@@ -109,7 +109,7 @@ const Home = () => {
             <input
               type="text"
               name="course"
-              value={formData.course}
+              value={formData.course.toUpperCase()}
               onChange={handleChange}
               className="w-full p-3 border border-gray-400 rounded-md focus:ring focus:ring-blue-300"
               required
@@ -153,8 +153,9 @@ const Home = () => {
             {title}
           </h2>
           <div className="flex justify-between text-center my-2 text-base font-bold">
-            <span className="mx-2">Name</span>
-            <span>Roll No.</span>
+            <span className="mx-2">Sno.</span>
+            <span className="ml-">Name</span>
+            <span className="ml-5">Roll No.</span>
             <span className="mx-2">Course</span>
           </div>
           <ul className="space-y-3">
@@ -163,6 +164,7 @@ const Home = () => {
                 key={index}
                 className="p-4 bg-gray-100 rounded-lg shadow-sm flex justify-between items-center"
               >
+                <span className="font-semibold">{index + 1}</span>
                 <span className="font-semibold">{item.name}</span>
                 <span className="text-gray-700">{item.roll_no}</span>
                 <span className="text-gray-500">{item.course}</span>
