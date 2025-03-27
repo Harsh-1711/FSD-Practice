@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
-const Home = () => {
+const BBA = () => {
   const [students, setStudents] = useState([]);
   const [title, setTitle] = useState("");
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleShowStudents = async (course) => {
-    if (title === `${course} Students` && isVisible) {
+  const handleShowStudents = async () => {
+    if (title === `BBA Students` && isVisible) {
       setIsVisible(false);
       return;
     }
     try {
-      const response = await axios.get(`http://localhost:8080/${course}`);
+      const response = await axios.get(`http://localhost:8080/BBA`);
       const filteredData = response.data.map(
         ({ _id, __v, createdAt, updatedAt, ...rest }) => rest
       );
 
       setStudents(filteredData);
-      setTitle(`${course} Students`);
+      setTitle(`BBA Students`);
       setIsVisible(true);
     } catch (err) {
       toast.error(err.response?.data?.message || "Failed to fetch students!");
@@ -31,22 +31,17 @@ const Home = () => {
       <Toaster />
 
       <div className="flex flex-wrap gap-4 mt-6">
-        {[
-          { name: "MCA", color: "bg-green-500 hover:bg-green-600" },
-          { name: "BCA", color: "bg-purple-500 hover:bg-purple-600" },
-          { name: "MBA", color: "bg-blue-500 hover:bg-blue-600" },
-          { name: "BBA", color: "bg-orange-500 hover:bg-orange-600" },
-        ].map(({ name, color }) => (
-          <button
-            key={name}
-            onClick={() => handleShowStudents(name)}
-            className={`${color} text-white px-6 py-2 rounded-md font-bold shadow-md transition`}
-          >
-            {title === `${name} Students` && isVisible
-              ? `Hide ${name} Students`
-              : `Show ${name} Students`}
-          </button>
-        ))}
+        <button
+          key="BBA"
+          onClick={() => handleShowStudents()}
+          className={
+            " bg-green-500 text-white px-6 py-2 rounded-md font-bold shadow-md transition"
+          }
+        >
+          {title === `BBA Students` && isVisible
+            ? `Hide BBA Students`
+            : `Show BBA Students`}
+        </button>
       </div>
 
       {/* Student Table */}
@@ -93,4 +88,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default BBA;
