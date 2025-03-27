@@ -65,8 +65,12 @@ const Home = () => {
         toast.error("Invalid data format received!");
       }
     } catch (err) {
-      console.error(err);
-      toast.error("Failed to fetch students!");
+      if (err.response) {
+        toast.error(`${err.response.data.error || "Unknown error"}`);
+      } else {
+        console.error(err);
+        toast.error("Failed to fetch students!");
+      }
     }
   };
 
