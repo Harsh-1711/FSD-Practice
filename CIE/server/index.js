@@ -2,6 +2,7 @@ require("dotenv").config({ path: "./config/.env" });
 require("./model/student");
 const express = require("express");
 const mongoose = require("mongoose");
+const weatherRoute = require("./routes/weather.routes.js");
 const STUDENT = require("./routes/students.routes.js");
 const QuickLink = require("./routes/quickLinks.routes.js");
 const app = express();
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 
 app.use("/", STUDENT);
 app.use("/api/quicklinks", QuickLink);
+app.use("/api", weatherRoute);
 
 app.listen(process.env.PORT || 3001, (error) => {
   if (!error) {

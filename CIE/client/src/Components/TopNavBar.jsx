@@ -10,16 +10,15 @@ const TopNavBar = () => {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
-  const API_KEY = "d8e929deaafbee71b34817c77c5d621c";
-
   useEffect(() => {
     const fetchWeather = async () => {
       try {
         const res = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=metric`
+          `http://localhost:8080/api/weather?location=${location}`
         );
+
         const data = await res.json();
-        setTemperature(data.main?.temp || "N/A");
+        setTemperature(data.temp || "N/A");
       } catch {
         setTemperature("N/A");
       }
