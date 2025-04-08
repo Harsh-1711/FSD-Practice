@@ -55,21 +55,21 @@ const TopNavBar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between px-4 py-4 mx-20 my-5">
+    <div className="flex items-center justify-between px-4 pt-2 mx-20 mt-5">
       <img src="/assets/MSN-Logo.png" alt="MSN logo" className="h-12 w-22" />
 
-      <div className="relative w-full max-w-2xl">
+      <div className="relative w-[60%] ">
         <div className="flex">
           <input
             type="text"
             placeholder="Search the web"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="text-black border bg-white border-gray-300 px-4 py-2 h-12 rounded-l-md w-full shadow shadow-gray-400 focus:outline-none"
+            className="text-black border bg-white  border-gray-300 px-4 py-2 h-12 rounded-l-md w-full shadow shadow-gray-400 focus:outline-none"
           />
           <button
             onClick={handleSearchClick}
-            className="bg-custom-blue px-4 py-2 w-18 rounded-r-md text-white shadow shadow-gray-400 hover:bg-blue-500 cursor-pointer"
+            className="bg-custom-blue px-4 py-2 w-18 rounded-r-md text-white shadow shadow-gray-400 cursor-pointer"
           >
             <div className="flex items-center justify-center w-10 h-8 ">
               <LuSearch className="text-[1.5rem] text-white" />

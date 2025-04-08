@@ -12,7 +12,7 @@ const HomePage = () => {
       <div className="fixed top-0 left-0 right-0 bg-main-color z-50">
         <TopNavBar />
       </div>{" "}
-      <div className="h-30" />
+      <div className="h-25" />
       <QuickLinks />
       <BannerAd />
       <CategoryTabs />

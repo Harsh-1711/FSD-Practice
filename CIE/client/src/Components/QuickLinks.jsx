@@ -50,14 +50,13 @@ const links = [
 
 const QuickLinks = () => {
   return (
-    <div className="flex overflow-x-auto  justify-between  space-x-6 px-4 py-3 mx-30 ">
+    <div className="flex overflow-x-auto  justify-between  space-x-6 px-4  mx-30 ">
       {links.map((link, idx) => (
         <a
           key={idx}
           href={link.url}
           target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center text-sm font-semibold cursor-pointer"
+          className="flex flex-col items-center w-80 h-25 text-sm font-semibold cursor-pointer p-4 hover:bg-gray-200 rounded-md"
         >
           {link.icon.startsWith("http") ? (
             <img
