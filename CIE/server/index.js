@@ -3,6 +3,7 @@ require("./model/student");
 const express = require("express");
 const mongoose = require("mongoose");
 const STUDENT = require("./routes/students.routes.js");
+const QuickLink = require("./routes/quickLinks.routes.js");
 const app = express();
 const cors = require("cors");
 const PORT = process.env.PORT;
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/", STUDENT);
+app.use("/api/quicklinks", QuickLink);
 
 app.listen(process.env.PORT || 3001, (error) => {
   if (!error) {

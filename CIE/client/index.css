@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+}
+
+@theme {
+    --color-main-color: #f4f4f2;
+    --color-custom-blue: rgb(51 147 223);
+}

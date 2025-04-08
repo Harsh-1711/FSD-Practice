@@ -13,40 +13,43 @@
     </div>
     <div class="logo2"><img src="https://www.irctc.co.in/nget/assets/images/logo.png" alt=""></div>
   </nav>
-  <div class="container">
-    <!-- Booking Form -->
-    <div class="booking-form">
-      <button class="b1">PNR STATUS</button>
-      <button class="b2">CHARTS / VACANCY</button>
-      <h2>BOOK TICKET</h2>
-      <label>From</label>
-      <input type="text" placeholder="Enter Departure Station">
+  <div class="mt-30">
+    <div class="container">
+      <!-- Booking Form -->
+      <div class="booking-form">
+        <button class="b1">PNR STATUS</button>
+        <button class="b2">CHARTS / VACANCY</button>
+        <h2>BOOK TICKET</h2>
+        <label>From</label>
+        <input type="text" placeholder="Enter Departure Station">
 
-      <label>To</label>
-      <input type="text" placeholder="Enter Destination Station">
+        <label>To</label>
+        <input type="text" placeholder="Enter Destination Station">
 
-      <label>Date</label>
-      <input type="date">
+        <label>Date</label>
+        <input type="date">
 
-      <label>Class</label>
-      <select>
-        <option>All Classes</option>
-        <option>General</option>
-        <option>AC 1st Class</option>
-        <option>AC 2nd Class</option>
-      </select>
+        <label>Class</label>
+        <select>
+          <option>All Classes</option>
+          <option>General</option>
+          <option>AC 1st Class</option>
+          <option>AC 2nd Class</option>
+        </select>
 
-      <div class="checkbox-group">
-        <label><input type="checkbox"> Person With Disability</label>
-        <label><input type="checkbox"> Train with Available Berth</label>
-        <label><input type="checkbox"> Railway Pass Concession</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Person With Disability</label>
+          <label><input type="checkbox"> Train with Available Berth</label>
+          <label><input type="checkbox"> Railway Pass Concession</label>
+        </div>
+
+        <button class="search-button">Search</button>
       </div>
 
-      <button class="search-button">Search</button>
     </div>
-
   </div>
-  <app-footer />
 
 </main>
+<app-footer />
+
 <router-outlet />
