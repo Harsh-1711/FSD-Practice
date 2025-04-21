@@ -1,0 +1,18 @@
+<div class="bg-gray-500">
+    <button
+        class="p-1 border border-black ml-1 rounded-md text-white bg-black cursor-pointer hover:bg-gray-700 ease-in-out duration-300  "
+        (click)="clickMessage()">Click me</button>
+    <p>Your message is :{{message}}</p>
+    <span class="block h-[0.5px] bg-black w-full px-10  my-2"></span>
+    <div class="container2">
+        <h2 class="ml-14 font-bold p-1 text-gray-200">{{value}}</h2>
+        <button
+            class="px-5 py-2 text-2xl border border-black ml-1 rounded-md text-white bg-black cursor-pointer hover:bg-green-600 ease-in-out duration-300  "
+            (click)="increment() ">+</button>
+        <button
+            class="px-6 py-2 border text-2xl border-black ml-1 rounded-md text-white bg-black cursor-pointer hover:bg-red-700 ease-in-out duration-300  "
+            (click)="decrement()">-</button>
+    </div>
+
+    <span class="block h-[0.5px] bg-black w-full px-10 my-2"></span>
+</div>
