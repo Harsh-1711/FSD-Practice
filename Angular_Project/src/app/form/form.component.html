@@ -1,0 +1,9 @@
+<form #loginForm="ngForm" (ngSubmit)="submitForm()">
+    <input type="text" name="uname" [(ngModel)]="logobj.uname" required placeholder="Username"
+        class="border border-black mx-2">
+
+    <input type="password" name="upass" [(ngModel)]="logobj.upass" required placeholder="Password"
+        class="border border-black mx-2">
+
+    <input type="submit" value="Submit" class="border border-black mx-2">
+</form>
