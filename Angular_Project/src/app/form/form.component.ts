@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class FormComponent {
   err: string = '';
+  comments: string = '';
   logobj: any = {
     uname: '',
     upass: '',
@@ -18,7 +19,11 @@ export class FormComponent {
     // event.preventDefault();
     if (this.logobj.uname == '' || this.logobj.upass == '')
       alert('Enter all details');
-    else alert(this.logobj.uname + ' ' + this.logobj.upass);
-    console.log('Form submitted:', this.logobj);
+    else {
+      // alert(this.logobj.uname + ' ' + this.logobj.upass);
+      console.log('Form submitted:', this.logobj);
+      this.comments += this.logobj.uname + '\n';
+      console.log(this.comments);
+    }
   }
 }
